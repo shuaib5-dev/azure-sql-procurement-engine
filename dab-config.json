@@ -24,11 +24,17 @@
     },
     "host": {
       "cors": {
-        "origins": [],
+        "origins": [
+          "http://localhost:5000"
+        ],
         "allow-credentials": false
       },
       "authentication": {
-        "provider": "Unauthenticated"
+        "provider": "EntraID",
+        "jwt": {
+          "audience": "api://71b03d63-6566-4576-bf73-7722de203e73",
+          "issuer": "https://sts.windows.net/40cba398-9515-4123-b8d6-7ed4127b8ef9/"
+        }
       },
       "mode": "development"
     },
@@ -65,11 +71,9 @@
       },
       "permissions": [
         {
-          "role": "anonymous",
+          "role": "authenticated",
           "actions": [
-            {
-              "action": "*"
-            }
+            "*"
           ]
         }
       ]
@@ -95,11 +99,9 @@
       },
       "permissions": [
         {
-          "role": "anonymous",
+          "role": "authenticated",
           "actions": [
-            {
-              "action": "*"
-            }
+            "*"
           ]
         }
       ]
