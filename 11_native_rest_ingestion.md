@@ -521,7 +521,6 @@ Before taking the Applied Skills lab, you should answer these cold:
 | OPENJSON | [OPENJSON documentation](https://learn.microsoft.com/en-us/sql/t-sql/functions/openjson-transact-sql) |
 | JSON_VALUE | [JSON_VALUE documentation](https://learn.microsoft.com/en-us/sql/t-sql/functions/json-value-transact-sql) |
 
----
 
 **Status:** Complete — 2026-10-06
 **Assessment Task 4:** Ready ✅
