@@ -58,6 +58,7 @@ GO
 EXEC sp_configure 'external rest endpoint enabled', 1;
 RECONFIGURE;
 GO
+```
 
 ---
 
@@ -397,6 +398,11 @@ BEGIN
 END;
 GO
 ```
+```
+-- NOTE: This API is not on the Azure SQL allow-list.
+-- In production, this would be proxied via Azure Functions or APIM.
+-- The example demonstrates the pattern, not the exact endpoint.
+```
 
 ### Use Case 2 — Webhook Trigger on Order Insert
 
@@ -420,6 +426,11 @@ BEGIN
         @response   = @response OUTPUT;
 END;
 GO
+```
+```
+-- NOTE: Slack webhooks are not on the Azure SQL allow-list.
+-- In production, this would be proxied via Azure Functions (Function receives
+-- the request from Azure SQL, then posts to Slack) or via APIM.
 ```
 
 ### Use Case 3 — Sync from SaaS (via Azure Function Proxy)
